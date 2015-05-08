@@ -973,6 +973,8 @@ static SIAlertView *__si_alert_current_view;
 	button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     button.titleLabel.font = self.buttonFont;
 	[button setTitle:item.title forState:UIControlStateNormal];
+    button.layer.cornerRadius = 5;
+    button.layer.masksToBounds = YES;
 	UIImage *normalImage = nil;
 	UIImage *highlightedImage = nil;
 	switch (item.type) {
